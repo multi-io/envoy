@@ -50,9 +50,6 @@ static_resources:
                 port_value: 10000
     transport_socket:
       name: envoy.transport_sockets.tls
-      typed_config:
-        "@type": type.googleapis.com/envoy.extensions.transport_sockets.tls.v3.UpstreamTlsContext
-        sni: domain1.example.com
 
   - name: proxy-client-domain2
     type: STRICT_DNS
@@ -68,9 +65,6 @@ static_resources:
                 port_value: 10000
     transport_socket:
       name: envoy.transport_sockets.tls
-      typed_config:
-        "@type": type.googleapis.com/envoy.extensions.transport_sockets.tls.v3.UpstreamTlsContext
-        sni: domain2.example.com
 
   - name: proxy-client-domain3
     type: STRICT_DNS
@@ -86,6 +80,3 @@ static_resources:
                 port_value: 10000
     transport_socket:
       name: envoy.transport_sockets.tls
-      typed_config:
-        "@type": type.googleapis.com/envoy.extensions.transport_sockets.tls.v3.UpstreamTlsContext
-        sni: domain3.example.com
